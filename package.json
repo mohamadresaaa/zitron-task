@@ -1,0 +1,39 @@
+{
+  "name": "zitron-task",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src",
+    "start": "node dist",
+    "build": "tsc",
+    "prettier": "prettier -w ./",
+    "test": "jest --watchAll --no-cache --runInBand --detectOpenHandles"
+  },
+  "dependencies": {
+    "auto-bind": "4.0.0",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.3",
+    "typescript": "^5.5.4"
+  },
+  "devDependencies": {
+    "@types/auto-bind": "^2.1.0",
+    "@types/body-parser": "^1.19.5",
+    "@types/cookie-parser": "^1.4.7",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^22.4.1",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "./tests/setup.ts"
+    ]
+  }
+}
